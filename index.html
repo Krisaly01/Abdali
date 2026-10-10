@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartas Legendarias de Yu-Gi-Oh!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>YU-GI-OH! PARA EL MUNDO</h1>
+
+    <div class="video-container">
+    <video id="video-personal" src="mi_video.mp4" controls></video>
+</div>
+
+    <div class="container">
+        <!-- Mago Oscuro -->
+        <div class="card-container" onclick="mostrarInfo('mago-oscuro')">
+            <img src="mago_oscuro.jpg" alt="Mago Oscuro" class="card-img">
+            <div class="card-name">Mago Oscuro</div>
+        </div>
+
+        <!-- Exodia -->
+        <div class="card-container" onclick="mostrarInfo('exodia')">
+            <img src="exodia.jpg" alt="Exodia" class="card-img">
+            <div class="card-name">Exodia, el Prohibido</div>
+        </div>
+
+        <!-- Dragón Blanco -->
+        <div class="card-container" onclick="mostrarInfo('dragon-blanco')">
+            <img src="dragon_blanco.jpg" alt="Dragón Blanco" class="card-img">
+            <div class="card-name">Dragón Blanco de Ojos Azules</div>
+        </div>
+
+        <!-- Dragón Negro -->
+        <div class="card-container" onclick="mostrarInfo('dragon-negro')">
+            <img src="dragon_negro.jpg" alt="Dragón Negro" class="card-img">
+            <div class="card-name">Dragón Negro de Ojos Rojos</div>
+        </div>
+
+        <!-- Dragón Alado de Ra -->
+        <div class="card-container" onclick="mostrarInfo('dragon-ra')">
+            <img src="dragon_ra.jpg" alt="Dragón Alado de Ra" class="card-img">
+            <div class="card-name">El Dragón Alado de Ra</div>
+        </div>
+    </div>
+
+    <!-- Caja de texto única (Modal) -->
+    <div id="info-modal" class="modal" onclick="cerrarModalExterno(event)">
+        <div class="modal-content">
+            <span class="close-btn" onclick="cerrarModal()">&times;</span>
+            <h2 id="modal-name" class="modal-title">Nombre</h2>
+            <div class="info-row"><span class="info-label">Atributo:</span> <span id="modal-attribute" class="info-text"></span></div>
+            <div class="info-row"><span class="info-label">Nivel:</span> <span id="modal-level" class="info-text"></span></div>
+            <div class="info-row"><span class="info-label">Tipo:</span> <span id="modal-type" class="info-text"></span></div>
+            <div class="info-row"><span class="info-label">ATK / DEF:</span> <span id="modal-stats" class="info-text"></span></div>
+            <div class="info-row" style="margin-top: 15px;">
+                <span class="info-label">Descripción / Efecto:</span><br>
+                <p id="modal-effect" class="info-text" style="margin-top: 5px; text-align: justify;"></p>
+            </div>
+        </div>
+    </div>
+    <!-- Archivos de Audio y Video -->
+    <audio id="audio-intro" src="audio_intro.mp3" autoplay></audio>
+
+    <audio id="audio-mago-oscuro" src="mago_oscuro.mp3" preload="auto"></audio>
+    <audio id="audio-exodia" src="exodia.mp3" preload="auto"></audio>
+    <audio id="audio-dragon-blanco" src="dragon_blanco.mp3" preload="auto"></audio>
+    <audio id="audio-dragon-negro" src="dragon_negro.mp3" preload="auto"></audio>
+    <audio id="audio-dragon-ra" src="dragon_ra.mp3" preload="auto"></audio>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
